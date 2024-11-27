@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "CUDA C++ build active file",
+            "command": "nvcc",
+            "args": ["-g", "-G", "${file}", "-o",
+            "${fileDirname}/${fileBasenameNoExtension}"],
+            "options": {
+                "cwd": "/usr/local/cuda-12.1/bin"
+            },
+            "problemMatcher": ["$nvcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
